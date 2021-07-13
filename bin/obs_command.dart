@@ -23,7 +23,7 @@ void main(List<String> arguments) async {
 
 CommandRunner buildCommands() {
   var runner =
-      CommandRunner('obs_command', 'A command runner for obs written in dart')
+      CommandRunner('obs_command', 'A command runner for obs written in dart by Sacrementus')
         ..addCommand(SwitchScene())
         ..addCommand(ToggleAudio())
         ..addCommand(Mute())
