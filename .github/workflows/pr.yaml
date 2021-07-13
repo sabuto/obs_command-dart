@@ -25,6 +25,7 @@ jobs:
         run: dart test
 
   release:
+    needs: build
     name: Release binaries
     runs-on: ${{matrix.os}}
 
@@ -40,6 +41,12 @@ jobs:
             output-name: obs_command-windows.exe
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install Dart
+        uses: dart-lang/setup-dart@v1
+      - name: Install pub Dependencies
+        run: dart pub get
       - name: Build Artifacts
         run: dart compile exe -o build/${{matrix.output-name}}
       - name: Upload Artifacts
