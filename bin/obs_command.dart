@@ -2,6 +2,8 @@ import 'package:args/command_runner.dart';
 import 'package:obs_command/commands/CustomCommand.dart';
 import 'package:obs_command/commands/HideSource.dart';
 import 'package:obs_command/commands/MuteCommand.dart';
+import 'package:obs_command/commands/PauseRecording.dart';
+import 'package:obs_command/commands/ResumeRecording.dart';
 import 'package:obs_command/commands/SetProfile.dart';
 import 'package:obs_command/commands/SetVolume.dart';
 import 'package:obs_command/commands/ShowSource.dart';
@@ -21,7 +23,7 @@ void main(List<String> arguments) async {
 
 CommandRunner buildCommands() {
   var runner =
-      CommandRunner('obs_command', 'A command runner for obs written in dart')
+      CommandRunner('obs_command', 'A command runner for obs written in dart by Sacrementus')
         ..addCommand(SwitchScene())
         ..addCommand(ToggleAudio())
         ..addCommand(Mute())
@@ -35,6 +37,8 @@ CommandRunner buildCommands() {
         ..addCommand(HideSource())
         ..addCommand(ToggleSource())
         ..addCommand(StartRecording())
-        ..addCommand(StopRecording());
+        ..addCommand(StopRecording())
+        ..addCommand(PauseRecording())
+        ..addCommand(ResumeRecording());
   return runner;
 }
