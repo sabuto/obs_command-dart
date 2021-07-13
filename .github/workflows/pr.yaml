@@ -7,7 +7,7 @@ on:
 name: Build and Release Apps
 jobs:
   build:
-    name: Build Apps
+    name: Run tests and analyze code
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

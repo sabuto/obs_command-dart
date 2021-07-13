@@ -1,4 +1,5 @@
 import 'package:args/command_runner.dart';
+import 'package:obs_command/commands/CustomCommand.dart';
 import 'package:obs_command/commands/MuteCommand.dart';
 import 'package:obs_command/commands/SetProfile.dart';
 import 'package:obs_command/commands/SetVolume.dart';
@@ -23,6 +24,7 @@ CommandRunner buildCommands() {
         ..addCommand(SetProfile())
         ..addCommand(SetVolume())
         ..addCommand(StartStream())
-        ..addCommand(StopStream());
+        ..addCommand(StopStream())
+        ..addCommand(CustomCommand());
   return runner;
 }
