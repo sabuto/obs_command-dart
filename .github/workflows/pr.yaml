@@ -47,6 +47,8 @@ jobs:
         uses: dart-lang/setup-dart@v1
       - name: Install pub Dependencies
         run: dart pub get
+      - name: Make build dir
+        run: mkdir build
       - name: Build Artifacts
         run: dart compile exe -o build/${{matrix.output-name}}
       - name: Upload Artifacts
