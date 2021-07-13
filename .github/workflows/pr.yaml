@@ -50,7 +50,7 @@ jobs:
       - name: Make build dir
         run: mkdir build
       - name: Build Artifacts
-        run: dart compile exe -o build/${{matrix.output-name}}
+        run: dart compile exe -o build/${{matrix.output-name}} bin/obs_command.dart
       - name: Upload Artifacts
         uses: actions/upload-artifact@v1
         with:
