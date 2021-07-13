@@ -77,8 +77,8 @@ jobs:
           draft: true
           body_path: ${{steps.release_notes.outputs.changelog}}
           files: |
-            obs_command-linux
-            obs_command-mac
-            obs_command-windows.exe
+            /home/runner/work/obs_command-dart/obs_command-dart/obs_command-linux
+            /home/runner/work/obs_command-dart/obs_command-dart/obs_command-mac
+            /home/runner/work/obs_command-dart/obs_command-dart/obs_command-windows.exe
         env:
           GITHUB_TOKEN: ${{secrets.TOKEN}}
