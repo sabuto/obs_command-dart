@@ -67,7 +67,7 @@ jobs:
           body_path: ${{steps.release_notes.outputs.changelog}}
           files: |
             bin/obs_command-linux
-           bin/obs_command-mac
-           bin/obs_command-windows.exe
-       env:
+            bin/obs_command-mac
+            bin/obs_command-windows.exe
+        env:
          GITHUB_TOKEN: ${{secrets.TOKEN}}
