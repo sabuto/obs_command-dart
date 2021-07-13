@@ -1,0 +1,49 @@
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+
+name: Build and Release Apps
+jobs:
+  build:
+    name: Build Apps
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install Dart
+        uses: dart-lang/setup-dart@v1
+      - name: Install pub Dependencies
+        run: dart pub get
+      - name: Analyze code
+        run: dart analyze
+      - name: Run Tests
+        run: dart test
+
+  release:
+    name: Release binaries
+    runs-on: ${{matrix.os}}
+
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macOS-latest ]
+        include:
+          - os: ubuntu-latest
+            output-name: obs_command-linux
+          - os: macOS-latest
+            output-name: obs_command-mac
+          - os: windows-latest
+            output-name: obs_command-windows.exe
+
+    steps:
+      - name: Build Artifacts
+        run: dart compile exe -o build/${{matrix.output-name}}
+      - name: Upload Artifacts
+        uses: actions/upload-artifact
+        with:
+          name: native-executeables
+          path: build
