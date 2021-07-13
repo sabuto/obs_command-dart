@@ -11,7 +11,7 @@ class BaseCommand extends Command {
   String get name => throw UnimplementedError();
 
   BaseCommand() {
-    obs = ObsCommand(false, 'localhost', '4444');
+    obs = ObsCommand();
   }
 
   @override

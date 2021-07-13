@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:obs_websocket/obs_websocket.dart';
+import 'package:path/path.dart' as p;
 import 'package:yaml/yaml.dart';
 
 class ObsCommand {
@@ -9,20 +10,24 @@ class ObsCommand {
   String? password;
   late final ObsWebSocket socket;
 
-  ObsCommand(bool config, [String? host, String? port, String? password]) {
+  ObsCommand({String? host, String? port, String? password}) {
+    var file;
     // pull values from config if it exists - allow them to be overwritten by arguments at runtime
-    if (config) {
-      var file = loadYaml(File('config.yaml').readAsStringSync());
+    try {
+      file =
+          loadYaml(File('config.yaml').readAsStringSync());
       this.host = file['host'];
-      this.port = file['port'];
+      this.port = file['port'].toString();
       this.password = file['password'];
-    } else {
-      print('Config not found');
+    } catch (e) {
+      print('File Error: $e');
+      exit(3);
     }
-    // check to see if args were passed in, if they were set the values
-    if (host != null) this.host = host;
-    if (port != null) this.port = port;
-    if (password != null) this.password = password;
+
+    // // check to see if args were passed in, if they were set the values
+    // if (host != null) this.host = host;
+    // if (port != null) this.port = port;
+    // if (password != null) this.password = password;
   }
 
   Future<void> connectToObs() async {

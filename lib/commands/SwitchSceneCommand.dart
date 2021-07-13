@@ -16,9 +16,8 @@ class SwitchScene extends BaseCommand {
   @override
   Future<void> run() async {
     await super.run();
-    var scene = <String, dynamic>{'scene-name': argResults!['scene']};
     try {
-      await obs.socket.setCurrentScene(scene);
+      await obs.socket.setCurrentScene(argResults!['scene']);
       print('Scene Changed');
       exit(0);
     } catch (e) {
