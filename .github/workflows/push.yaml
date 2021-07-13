@@ -66,6 +66,8 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: native-executeables
+      - name: check artifacts
+        run: pwd && ls /home/runner/work/obs_command-dart/obs_command-dart
       - name: Create Release Notes
         id: release_notes
         uses: mikepenz/release-changelog-builder-action@v1
