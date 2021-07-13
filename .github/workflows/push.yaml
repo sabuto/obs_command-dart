@@ -23,7 +23,7 @@ jobs:
 
   release:
     needs: build
-    name: Release binaries
+    name: Build binaries and Create release if tagged
     runs-on: ${{matrix.os}}
 
     strategy:
@@ -53,3 +53,21 @@ jobs:
         with:
           name: native-executeables
           path: build
+     - name: Create Release Notes
+       id: release_notes
+       uses: mikepenz/release-changelog-builder-action@v1
+       if: startsWith(github.ref, 'refs/tags/')
+       env:
+         GITHUB_TOKEN: ${{ secrets.TOKEN }}
+     - name: Create Release
+       uses: softprops/action-gh-release@v1
+       if: startsWith(github.ref, 'refs/tags/')
+       with:
+         draft: true
+         body_path: ${{steps.release_notes.outputs.changelog}}
+         files: |
+           bin/obs_command-linux
+           bin/obs_command-mac
+           bin/obs_command-windows.exe
+       env:
+         GITHUB_TOKEN: ${{secrets.TOKEN}}
