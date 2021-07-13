@@ -43,7 +43,7 @@ jobs:
       - name: Build Artifacts
         run: dart compile exe -o build/${{matrix.output-name}}
       - name: Upload Artifacts
-        uses: actions/upload-artifact
+        uses: actions/upload-artifact@v1
         with:
           name: native-executeables
           path: build
