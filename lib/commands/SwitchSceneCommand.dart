@@ -10,7 +10,11 @@ class SwitchScene extends BaseCommand {
   String get name => 'SetScene';
 
   SwitchScene() {
-    argParser.addOption('scene', abbr: 's', mandatory: true);
+    argParser.addOption('scene',
+        abbr: 's',
+        mandatory: true,
+        help: 'The name of the scene to change to',
+        valueHelp: 'Scene Name');
   }
 
   @override

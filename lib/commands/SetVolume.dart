@@ -11,8 +11,16 @@ class SetVolume extends BaseCommand {
   String get name => 'SetVolume';
 
   SetVolume() {
-    argParser.addOption('source', abbr: 's', mandatory: true);
-    argParser.addOption('volume', abbr: 'v', mandatory: true);
+    argParser.addOption('source',
+        abbr: 's',
+        mandatory: true,
+        valueHelp: 'Source Name',
+        help: 'The name of the audio source to change the volume of.');
+    argParser.addOption('volume',
+        abbr: 'v',
+        mandatory: true,
+        valueHelp: 'volume percent',
+        help: 'The value you want the audio source to be in Percent');
   }
 
   @override

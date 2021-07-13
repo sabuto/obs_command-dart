@@ -10,7 +10,11 @@ class ToggleAudio extends BaseCommand {
   String get name => 'ToggleAudio';
 
   ToggleAudio() {
-    argParser.addOption('source', abbr: 's', mandatory: true);
+    argParser.addOption('source',
+        abbr: 's',
+        mandatory: true,
+        help: 'Allows you to toggle and audio source',
+        valueHelp: 'Audio Source');
   }
 
   @override

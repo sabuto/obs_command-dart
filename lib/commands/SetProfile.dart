@@ -10,7 +10,11 @@ class SetProfile extends BaseCommand {
   String get name => 'Profile';
 
   SetProfile() {
-    argParser.addOption('name', abbr: 'n', mandatory: true);
+    argParser.addOption('name',
+        abbr: 'n',
+        mandatory: true,
+        valueHelp: 'Profile Name',
+        help: 'The name of the profile to change to');
   }
 
   @override

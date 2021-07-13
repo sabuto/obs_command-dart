@@ -10,7 +10,11 @@ class UnMute extends BaseCommand {
   String get name => 'UnMute';
 
   UnMute() {
-    argParser.addOption('source', abbr: 's', mandatory: true);
+    argParser.addOption('source',
+        abbr: 's',
+        mandatory: true,
+        valueHelp: 'Audio Source',
+        help: 'The name of the audio source to unmute');
   }
 
   @override

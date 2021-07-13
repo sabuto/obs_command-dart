@@ -10,8 +10,16 @@ class CustomCommand extends BaseCommand {
   String get name => 'Command';
 
   CustomCommand() {
-    argParser.addOption('command', abbr: 'c', mandatory: true);
-    argParser.addOption('args', abbr: 'a');
+    argParser.addOption('command',
+        abbr: 'c',
+        mandatory: true,
+        valueHelp: 'Command Name',
+        help: 'The name of the command to send to obs');
+    argParser.addOption('args',
+        abbr: 'a',
+        valueHelp: 'request field name:request field value',
+        help:
+            'Arguments to send with command e.g source-name:source,anothervalue:here');
   }
 
   @override

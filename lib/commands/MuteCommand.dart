@@ -10,7 +10,9 @@ class Mute extends BaseCommand {
   String get name => 'Mute';
 
   Mute() {
-    argParser.addOption('source', abbr: 's', mandatory: true);
+    argParser.addOption('source', abbr: 's', mandatory: true,
+        valueHelp: 'Audio Source',
+        help: 'The name of the audio source to mute');
   }
 
   @override
