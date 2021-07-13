@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:obs_websocket/obs_websocket.dart';
-import 'package:path/path.dart' as p;
 import 'package:yaml/yaml.dart';
 
 class ObsCommand {
