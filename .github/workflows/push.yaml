@@ -64,7 +64,7 @@ jobs:
       - name: Download Artifacts
         uses: actions/download-artifact@v2
         with:
-          name: my-artifact
+          name: native-executeables
       - name: Create Release Notes
         id: release_notes
         uses: mikepenz/release-changelog-builder-action@v1
