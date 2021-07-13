@@ -9,6 +9,7 @@ import 'package:obs_command/commands/StartStream.dart';
 import 'package:obs_command/commands/StopStream.dart';
 import 'package:obs_command/commands/SwitchSceneCommand.dart';
 import 'package:obs_command/commands/ToggleAudioCommand.dart';
+import 'package:obs_command/commands/ToggleSource.dart';
 import 'package:obs_command/commands/UnMute.dart';
 
 void main(List<String> arguments) async {
@@ -29,6 +30,7 @@ CommandRunner buildCommands() {
         ..addCommand(StopStream())
         ..addCommand(CustomCommand())
         ..addCommand(ShowSource())
-        ..addCommand(HideSource());
+        ..addCommand(HideSource())
+        ..addCommand(ToggleSource());
   return runner;
 }
