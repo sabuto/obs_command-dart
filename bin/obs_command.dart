@@ -2,6 +2,8 @@ import 'package:args/command_runner.dart';
 import 'package:obs_command/commands/CustomCommand.dart';
 import 'package:obs_command/commands/HideSource.dart';
 import 'package:obs_command/commands/MuteCommand.dart';
+import 'package:obs_command/commands/PauseRecording.dart';
+import 'package:obs_command/commands/ResumeRecording.dart';
 import 'package:obs_command/commands/SetProfile.dart';
 import 'package:obs_command/commands/SetVolume.dart';
 import 'package:obs_command/commands/ShowSource.dart';
@@ -35,6 +37,8 @@ CommandRunner buildCommands() {
         ..addCommand(HideSource())
         ..addCommand(ToggleSource())
         ..addCommand(StartRecording())
-        ..addCommand(StopRecording());
+        ..addCommand(StopRecording())
+        ..addCommand(PauseRecording())
+        ..addCommand(ResumeRecording());
   return runner;
 }
