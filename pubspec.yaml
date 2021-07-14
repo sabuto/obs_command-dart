@@ -2,6 +2,8 @@ name: obs_command
 description: A sample command-line application for obs.
 version: 1.0.0
 homepage: https://github.com/Sabuto/obs_command-dart
+issue_tracker: https://github.com/Sabuto/obs_command-dart/issues
+documentation: https://github.com/Sabuto/obs_command-dart/blob/v1.0.0/README.md
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
