@@ -69,7 +69,7 @@ jobs:
           name: native-executeables
       - name: Create Release Notes
         id: release_notes
-        uses: mikepenz/release-changelog-builder-action@v1
+        uses: mikepenz/release-changelog-builder-action@v2.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
       - name: Get release notes
