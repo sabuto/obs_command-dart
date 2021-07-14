@@ -26,7 +26,7 @@ class ToggleAudio extends BaseCommand {
       print('Source Audio Toggled');
       exit(0);
     } catch (e) {
-      print('Failed to set scene - ${e.toString()}');
+      print('Failed to toggle audio - ${e.toString()}');
       exit(2);
     }
   }

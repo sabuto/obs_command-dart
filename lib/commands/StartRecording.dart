@@ -17,7 +17,7 @@ class StartRecording extends BaseCommand {
       print('Recording started');
       exit(0);
     } catch (e) {
-      print('Failed to switch profile - ${e.toString()}');
+      print('Failed to start recording - ${e.toString()}');
       exit(2);
     }
   }

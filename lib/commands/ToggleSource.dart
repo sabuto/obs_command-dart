@@ -52,7 +52,7 @@ class ToggleSource extends BaseCommand {
       print('Source visibility changed');
       exit(0);
     } catch (e) {
-      print('Failed to set scene - ${e.toString()}');
+      print('Failed to toggle source - ${e.toString()}');
       exit(2);
     }
   }

@@ -17,7 +17,7 @@ class ResumeRecording extends BaseCommand {
       print('Recording resumed');
       exit(0);
     } catch (e) {
-      print('Failed to switch profile - ${e.toString()}');
+      print('Failed to resume recording - ${e.toString()}');
       exit(2);
     }
   }

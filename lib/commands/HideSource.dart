@@ -37,7 +37,7 @@ class HideSource extends BaseCommand {
       print('Source Hidden');
       exit(0);
     } catch (e) {
-      print('Failed to set scene - ${e.toString()}');
+      print('Failed to Hide Source - ${e.toString()}');
       exit(2);
     }
   }

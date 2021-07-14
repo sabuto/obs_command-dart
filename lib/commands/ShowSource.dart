@@ -37,7 +37,7 @@ class ShowSource extends BaseCommand {
       print('Source Shown');
       exit(0);
     } catch (e) {
-      print('Failed to set scene - ${e.toString()}');
+      print('Failed to show source - ${e.toString()}');
       exit(2);
     }
   }
