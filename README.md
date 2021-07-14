@@ -1,16 +1,13 @@
 # Obs_command
-
+![windows](https://img.shields.io/badge/OS-Windows-informational?style=for-the-badge)
+![Mac](https://img.shields.io/badge/OS-MacOS-informational?style=for-the-badge)
+![Linux](https://img.shields.io/badge/OS-Linux-informational?style=for-the-badge)
+![Version](https://img.shields.io/github/v/release/sabuto/obs_command-dart?style=for-the-badge)
 ### What it does
 
 Obs_command is a cross-platform commandline utility for obs-websockets written in dart. I wrote this because I was
 wanting to learn dart and was unsure what to write. I took inspiration
 from [OBSCommander](https://github.com/REALDRAGNET/OBSCommand)
-
-### Platforms
-
-- [x] Widows
-- [x] MacOs - Untested
-- [x] Linux
 
 ### How To Use
 
