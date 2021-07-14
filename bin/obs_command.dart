@@ -11,6 +11,7 @@ import 'package:obs_command/commands/StartRecording.dart';
 import 'package:obs_command/commands/StartStream.dart';
 import 'package:obs_command/commands/StopRecording.dart';
 import 'package:obs_command/commands/StopStream.dart';
+import 'package:obs_command/commands/StudioMode.dart';
 import 'package:obs_command/commands/SwitchSceneCommand.dart';
 import 'package:obs_command/commands/ToggleAudioCommand.dart';
 import 'package:obs_command/commands/ToggleSource.dart';
@@ -22,23 +23,24 @@ void main(List<String> arguments) async {
 }
 
 CommandRunner buildCommands() {
-  var runner =
-      CommandRunner('obs_command', 'A command runner for obs written in dart by Sacrementus')
-        ..addCommand(SwitchScene())
-        ..addCommand(ToggleAudio())
-        ..addCommand(Mute())
-        ..addCommand(UnMute())
-        ..addCommand(SetProfile())
-        ..addCommand(SetVolume())
-        ..addCommand(StartStream())
-        ..addCommand(StopStream())
-        ..addCommand(CustomCommand())
-        ..addCommand(ShowSource())
-        ..addCommand(HideSource())
-        ..addCommand(ToggleSource())
-        ..addCommand(StartRecording())
-        ..addCommand(StopRecording())
-        ..addCommand(PauseRecording())
-        ..addCommand(ResumeRecording());
+  var runner = CommandRunner(
+      'obs_command', 'A command runner for obs written in dart by Sacrementus')
+    ..addCommand(SwitchScene())
+    ..addCommand(ToggleAudio())
+    ..addCommand(Mute())
+    ..addCommand(UnMute())
+    ..addCommand(SetProfile())
+    ..addCommand(SetVolume())
+    ..addCommand(StartStream())
+    ..addCommand(StopStream())
+    ..addCommand(CustomCommand())
+    ..addCommand(ShowSource())
+    ..addCommand(HideSource())
+    ..addCommand(ToggleSource())
+    ..addCommand(StartRecording())
+    ..addCommand(StopRecording())
+    ..addCommand(PauseRecording())
+    ..addCommand(ResumeRecording())
+    ..addCommand(StudioMode());
   return runner;
 }

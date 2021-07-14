@@ -43,6 +43,7 @@ Available commands:
   StartStream       Tell Obs to start streaming
   StopRecording     Tell Obs to stop recording
   StopStream        Tell Obs to stop streaming
+  StudioMode        Enable or disable studio mode
   ToggleAudio       Toggle the mute value of the audio source
   ToggleSource      Toggle a source in obs
   UnMute            UnMute the specified audio source
