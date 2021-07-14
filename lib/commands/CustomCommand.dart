@@ -42,7 +42,7 @@ class CustomCommand extends BaseCommand {
       print('Command Sent');
       exit(0);
     } catch (e) {
-      print('Failed to switch profile - ${e.toString()}');
+      print('Failed to send command - ${e.toString()}');
       exit(2);
     }
   }

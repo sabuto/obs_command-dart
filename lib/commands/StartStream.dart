@@ -17,7 +17,7 @@ class StartStream extends BaseCommand {
       print('Streaming started');
       exit(0);
     } catch (e) {
-      print('Failed to switch profile - ${e.toString()}');
+      print('Failed to start streaming - ${e.toString()}');
       exit(2);
     }
   }

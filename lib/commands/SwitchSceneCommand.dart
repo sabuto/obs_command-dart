@@ -25,7 +25,7 @@ class SwitchScene extends BaseCommand {
       print('Scene Changed');
       exit(0);
     } catch (e) {
-      print('Failed to set scene - ${e.toString()}');
+      print('Failed to change scene - ${e.toString()}');
       exit(2);
     }
   }
