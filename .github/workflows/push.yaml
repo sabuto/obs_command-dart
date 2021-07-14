@@ -71,6 +71,8 @@ jobs:
         uses: mikepenz/release-changelog-builder-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      - name: Get release notes
+        run: echo "${{setps.release_notes.outputs.changelog}}"
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
