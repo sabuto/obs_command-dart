@@ -49,11 +49,14 @@ jobs:
         run: mkdir build
       - name: Build Artifacts
         run: dart compile exe -o build/${{matrix.output-name}} bin/obs_command.dart
-      - name: Upload Artifacts
+      - name: Upload native
+
         uses: actions/upload-artifact@v1
         with:
           name: native-executeables
-          path: build
+          path: |
+            build
+            config.yaml
 
   release:
     if: startsWith(github.ref, 'refs/tags/')

@@ -14,7 +14,9 @@ from [OBSCommander](https://github.com/REALDRAGNET/OBSCommand)
 
 ### How To Use
 
-Download the executable for your platform from https://github.com/Sabuto/obs_command-dart/releases.
+Download the executable for your platform and the config.yaml from https://github.com/Sabuto/obs_command-dart/releases.
+
+Make sure the config.yaml and obs_command are in the same directory.
 
 From the Terminal or command line navigate to the folder with the executable in and run
 ```obs_command help```

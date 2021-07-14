@@ -1,7 +1,7 @@
 name: obs_command
-description: A sample command-line application.
+description: A sample command-line application for obs.
 version: 1.0.0
-# homepage: https://www.example.com
+homepage: https://github.com/Sabuto/obs_command-dart
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
