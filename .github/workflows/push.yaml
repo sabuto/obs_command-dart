@@ -39,7 +39,7 @@ jobs:
             output-name: obs_command-windows.exe
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository2
         uses: actions/checkout@v2
       - name: Install Dart
         uses: dart-lang/setup-dart@v1
