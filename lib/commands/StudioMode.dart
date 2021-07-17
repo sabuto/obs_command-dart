@@ -26,7 +26,7 @@ class StudioMode extends BaseCommand {
         await obs.socket.enableStudioMode();
         print('Studio Mode enabled');
       } else if (action == 'disable') {
-        await obs.socket.command('DisableStudioMode');
+        await obs.socket.disableStudioMode();
         print('Studio Mode disabled');
       } else {
         printUsage();
