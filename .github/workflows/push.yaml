@@ -88,7 +88,7 @@ jobs:
         with:
           upload_url: ${{ steps.release_drafter.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
           asset_path: /home/runner/work/obs_command-dart/obs_command-dart/obs_command-windows.exe
-          asset_name: obs_command-windows
+          asset_name: obs_command-windows.exe
           asset_content_type: application/octet-stream
       - name: Upload Release Asset - windows
         uses: actions/upload-release-asset@v1
