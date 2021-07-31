@@ -3,6 +3,10 @@
 ![Mac](https://img.shields.io/badge/OS-MacOS-informational?style=for-the-badge)
 ![Linux](https://img.shields.io/badge/OS-Linux-informational?style=for-the-badge)
 ![Version](https://img.shields.io/github/v/release/sabuto/obs_command-dart?style=for-the-badge)
+
+![downloads_linux](https://img.shields.io/github/downloads/sabuto/obs_command-dart/latest/obs_command-linux?style=for-the-badge)
+![downloads_mac](https://img.shields.io/github/downloads/sabuto/obs_command-dart/latest/obs_command-mac?style=for-the-badge)
+![downloads_windows](https://img.shields.io/github/downloads/sabuto/obs_command-dart/latest/obs_command-windows.exe?style=for-the-badge)
 ### What it does
 
 Obs_command is a cross-platform commandline utility for obs-websockets written in dart. I wrote this because I was
