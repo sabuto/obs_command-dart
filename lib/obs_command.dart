@@ -9,7 +9,7 @@ class ObsCommand {
   String? password;
   late final ObsWebSocket socket;
 
-  ObsCommand({String? host, String? port, String? password}) {
+  ObsCommand() {
     var file;
     // pull values from config if it exists - allow them to be overwritten by arguments at runtime
     try {
